@@ -23,5 +23,6 @@ defmodule ElixirNinetyNineBackendChallenge.Router do
   scope "/testapi/v1", ElixirNinetyNineBackendChallenge do
      pipe_through :api
      get "/companies", CompanyController, :index
+     get "/companies/:id", CompanyController, :show
   end
 end
