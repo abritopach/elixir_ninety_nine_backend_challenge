@@ -18,12 +18,7 @@ defmodule ElixirNinetyNineBackendChallenge.BackgroundTask do
       end
 
       # Insert in historical table.
-      #Enum.each res, fn company ->
-      #  ElixirNinetyNineBackendChallenge.Repo.insert(%ElixirNinetyNineBackendChallenge.Historical{
-      #  name: company["name"],
-      #  ric: company["ric"],
-      #  sharePrice: company["sharePrice"]})
-      #end
+      addHistorical(res)
     end
 
     def addCompany(res) do
@@ -45,7 +40,16 @@ defmodule ElixirNinetyNineBackendChallenge.BackgroundTask do
               {:ok, struct}       -> IO.puts("Updated with success")
               {:error, changeset} -> IO.puts("Something went wrong")
             end
-          end
+        end
+    end
+
+    def addHistorical(res) do
+        Enum.each res, fn company ->
+            ElixirNinetyNineBackendChallenge.Repo.insert(%ElixirNinetyNineBackendChallenge.Historical{
+                name: company["name"],
+                ric: company["ric"],
+                sharePrice: company["sharePrice"]})
+        end
     end
 
 end

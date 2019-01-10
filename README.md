@@ -5,6 +5,9 @@ Project that shows how to build an Elixir API Rest. This project exposes (using 
   * List of companies (http://localhost:4000/testapi/v1/companies)
   * Info by company (http://localhost:4000/testapi/v1/companies/{companyId})
   * Time series of the company share price. It should support hourly, daily and weekly time series.
+    -> All http://localhost:4000/testapi/v1/historical
+    -> Dayly http://localhost:4000/testapi/v1/historical/{ric}/daily
+    -> Weekly Dayly http://localhost:4000/testapi/v1/historical/{ric}/weekly
 
 This project was generated with [MIX](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html).
 
