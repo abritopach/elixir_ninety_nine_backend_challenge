@@ -3,28 +3,11 @@ defmodule ElixirNinetyNineBackendChallenge.CompanyController do
 
   def index(conn, _params) do
 
-    #companies = [
-    #  %ElixirNinetyNineBackendChallenge.Company{
-    #    id: 1,
-    #    name: "Apple Inc.",
-    #    ric: "APPL",
-    #    sharePrice: 223.154
-    #  },
-    #  %ElixirNinetyNineBackendChallenge.Company{
-    #    id: 2,
-    #    name: "Microsoft Corporation",
-    #    ric: "MSFT",
-    #    sharePrice: 102.574
-    #  },
-    #  %ElixirNinetyNineBackendChallenge.Company{
-    #    id: 3,
-    #    name: "Alphabet Inc.",
-    #    ric: "GOOG",
-    #    sharePrice: 1126.764
-    #  }
-    #]
+    ElixirNinetyNineBackendChallenge.CompanieService.start
+    res = ElixirNinetyNineBackendChallenge.CompanieService.make_request(:get, "testapi/1/companies")
+    IO.inspect res
 
-    # Access fixed company data. We use an Ecto repository to do this (lib/elixir_ninety_nine_backend_challenge/repo.ex)
+    # Access data from postgresql database companies table.
     companies = Repo.all(ElixirNinetyNineBackendChallenge.Company)
     json conn, companies
   end
