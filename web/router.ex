@@ -20,7 +20,8 @@ defmodule ElixirNinetyNineBackendChallenge.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirNinetyNineBackendChallenge do
-  #   pipe_through :api
-  # end
+  scope "/testapi/v1", ElixirNinetyNineBackendChallenge do
+     pipe_through :api
+     get "/companies", CompanyController, :index
+  end
 end
