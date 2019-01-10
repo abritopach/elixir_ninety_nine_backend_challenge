@@ -24,5 +24,9 @@ defmodule ElixirNinetyNineBackendChallenge.Router do
      pipe_through :api
      get "/companies", CompanyController, :index
      get "/companies/:id", CompanyController, :show
+     get "/historical", HistoricalController, :index
+     get "/historical/:ric/hourly", HistoricalController, :hourly
+     get "/historical/:ric/daily", HistoricalController, :daily
+     get "/historical/:ric/weekly", HistoricalController, :weekly
   end
 end
