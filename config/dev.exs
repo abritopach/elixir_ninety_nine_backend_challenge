@@ -41,3 +41,11 @@ config :elixir_ninety_nine_backend_challenge, ElixirNinetyNineBackendChallenge.R
   database: "elixir_ninety_nine_backend_challenge_dev",
   hostname: "localhost",
   pool_size: 10
+
+
+# Configure your scheduler
+config :elixir_ninety_nine_backend_challenge, ElixirNinetyNineBackendChallenge.Scheduler,
+jobs: [
+  # Every minute
+  {"* * * * *", fn -> IO.puts("Hello QUANTUM!") end}
+]

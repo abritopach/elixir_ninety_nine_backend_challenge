@@ -14,6 +14,7 @@ defmodule ElixirNinetyNineBackendChallenge do
       supervisor(ElixirNinetyNineBackendChallenge.Endpoint, []),
       # Start your own worker by calling: ElixirNinetyNineBackendChallenge.Worker.start_link(arg1, arg2, arg3)
       # worker(ElixirNinetyNineBackendChallenge.Worker, [arg1, arg2, arg3]),
+      worker(ElixirNinetyNineBackendChallenge.Scheduler, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
