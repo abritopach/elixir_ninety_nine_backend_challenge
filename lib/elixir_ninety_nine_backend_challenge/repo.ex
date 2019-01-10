@@ -1,5 +1,7 @@
 defmodule ElixirNinetyNineBackendChallenge.Repo do
-  # use Ecto.Repo, otp_app: :elixir_ninety_nine_backend_challenge
+  use Ecto.Repo, otp_app: :elixir_ninety_nine_backend_challenge
+
+  @docp """
   def all(ElixirNinetyNineBackendChallenge.Company) do
     [
       %ElixirNinetyNineBackendChallenge.Company{
@@ -26,4 +28,6 @@ defmodule ElixirNinetyNineBackendChallenge.Repo do
   def get(module, id) do
     Enum.find all(module), fn elem -> elem.id == id end
   end
+  """
+
 end
