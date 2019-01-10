@@ -46,6 +46,8 @@ config :elixir_ninety_nine_backend_challenge, ElixirNinetyNineBackendChallenge.R
 # Configure your scheduler
 config :elixir_ninety_nine_backend_challenge, ElixirNinetyNineBackendChallenge.Scheduler,
 jobs: [
-  # Every minute
-  {"* * * * *", fn -> IO.puts("Hello QUANTUM!") end}
+  make_request: [
+    schedule: {:extended, "*/20"}, # Runs every two seconds
+    task: {ElixirNinetyNineBackendChallenge.BackgroundTask, :get_companies, []}
+  ]
 ]

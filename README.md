@@ -1,5 +1,15 @@
 # ElixirNinetyNineBackendChallenge
 
+Project that shows how to build an Elixir API Rest. This project exposes (using REST routes endpoints) the following info using the JSON:API standard:
+
+  * List of companies (http://localhost:4000/testapi/v1/companies)
+  * Info by company (http://localhost:4000/testapi/v1/companies/{companyId})
+  * Time series of the company share price. It should support hourly, daily and weekly time series.
+
+This project was generated with [MIX](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html).
+
+Technologies: Elixir.
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
