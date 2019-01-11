@@ -13,6 +13,8 @@ This project was generated with [MIX](https://elixir-lang.org/getting-started/mi
 
 Technologies: Elixir.
 
+![Technologies](readme_resources/technologies.png "Technologies")
+
 ## Demo Example
 
 ![App](readme_resources/app.gif "App")
