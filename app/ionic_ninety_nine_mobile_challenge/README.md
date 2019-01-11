@@ -16,7 +16,7 @@ Before you go through this example, you should have at least a basic understandi
 
 * Test in localhost:
 
-To run it, cd into `ionic-employees-stitch-mongodb` and run:
+To run it, cd into `ionic-ninety-nine-mobile-challenge` and run:
 
 ```bash
 npm install
