@@ -4,6 +4,8 @@ Sample APP that shows how list of companies ordered by share price (which value 
 
 Technologies: Angular, Ionic, TypeScript.
 
+![Technologies](readme_resources/technologies.jpg "Technologies")
+
 ## App Example
 
 ![App](readme_resources/app.gif "App")
