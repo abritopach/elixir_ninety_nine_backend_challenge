@@ -15,9 +15,6 @@ defmodule ElixirNinetyNineBackendChallenge.HistoricalController do
     def daily(conn, %{"ric" => ric}) do
       IO.puts("Daily time series")
       IO.puts(ric)
-       #IO.puts(Date.utc_today)
-      #date = ~D[2019-01-02]
-      #IO.puts(date)
       date = Date.utc_today
       query = from h in ElixirNinetyNineBackendChallenge.Historical, where: h.ric == ^ric and fragment("?::date", h.inserted_at) == ^date
       result = Repo.all(query)

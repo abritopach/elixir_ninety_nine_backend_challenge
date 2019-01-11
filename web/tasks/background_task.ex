@@ -6,13 +6,10 @@ defmodule ElixirNinetyNineBackendChallenge.BackgroundTask do
       IO.inspect res
 
       companies = ElixirNinetyNineBackendChallenge.Repo.all(ElixirNinetyNineBackendChallenge.Company)
-      IO.puts(length(companies))
       if length(companies) === 0 do
-        IO.puts("Empty list")
         # Insert in company table.
         addCompany(res)
       else
-        IO.puts("List's not empty")
         # Update share prices of the companies.
         updateCompany(res)
       end

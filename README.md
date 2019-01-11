@@ -13,6 +13,10 @@ This project was generated with [MIX](https://elixir-lang.org/getting-started/mi
 
 Technologies: Elixir.
 
+## Demo Example
+
+![App](readme_resources/app.gif "App")
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
