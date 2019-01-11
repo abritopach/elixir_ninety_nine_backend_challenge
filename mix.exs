@@ -41,7 +41,8 @@ defmodule ElixirNinetyNineBackendChallenge.Mixfile do
      {:cowboy, "~> 1.0"},
      {:httpoison, "~> 1.4"},
      {:quantum, "~> 2.3"},
-     {:timex, "~> 3.0"}]
+     {:timex, "~> 3.0"},
+     {:cors_plug, "~> 2.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

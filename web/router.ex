@@ -10,6 +10,7 @@ defmodule ElixirNinetyNineBackendChallenge.Router do
   end
 
   pipeline :api do
+    plug CORSPlug, origin: "http://localhost:3001"
     plug :accepts, ["json"]
   end
 
@@ -22,6 +23,8 @@ defmodule ElixirNinetyNineBackendChallenge.Router do
   # Other scopes may use custom stacks.
   scope "/testapi/v1", ElixirNinetyNineBackendChallenge do
      pipe_through :api
+     resources "/companies", CompanyController
+	   options   "/companies", CompanyController, :options
      get "/companies", CompanyController, :index
      get "/companies/:id", CompanyController, :show
      get "/historical", HistoricalController, :index

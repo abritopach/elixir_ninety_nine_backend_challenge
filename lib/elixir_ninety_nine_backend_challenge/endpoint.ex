@@ -38,5 +38,7 @@ defmodule ElixirNinetyNineBackendChallenge.Endpoint do
     key: "_elixir_ninety_nine_backend_challenge_key",
     signing_salt: "Vx1WEy8M"
 
+  plug CORSPlug
+
   plug ElixirNinetyNineBackendChallenge.Router
 end
